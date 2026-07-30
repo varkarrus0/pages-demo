@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>Pages Demo — shipped by Codex</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080b14;--card:rgba(255,255,255,.075);--line:rgba(255,255,255,.14);--ink:#f7f8ff;--muted:#a9b0c5;--a:#7c5cff;--b:#21d4fd}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;background:radial-gradient(circle at 20% 15%,#23205c 0,transparent 34%),radial-gradient(circle at 85% 85%,#07384a 0,transparent 30%),var(--bg);color:var(--ink);display:grid;place-items:center;padding:28px}
+    main{width:min(880px,100%);padding:clamp(28px,6vw,72px);border:1px solid var(--line);background:var(--card);backdrop-filter:blur(20px);border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.45);position:relative;overflow:hidden}
+    main:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));filter:blur(80px);opacity:.28;right:-60px;top:-80px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#d8dcff;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:#66f2ad;box-shadow:0 0 15px #66f2ad}
+    h1{font-size:clamp(3.1rem,10vw,7rem);line-height:.88;letter-spacing:-.075em;margin:34px 0 28px;max-width:760px}
+    h1 span{background:linear-gradient(100deg,#fff 20%,#a997ff 60%,#72e5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    p{max-width:590px;color:var(--muted);font-size:clamp(1rem,2vw,1.2rem);line-height:1.7;margin:0}
+    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
+    .proof div{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(4,7,15,.36)}
+    strong{display:block;font-size:1.05rem;margin-bottom:5px}.proof small{color:var(--muted)}
+    footer{margin-top:42px;color:#7f879e;font-size:.84rem}
+    @media(max-width:620px){.proof{grid-template-columns:1fr}h1{font-size:clamp(3rem,18vw,5rem)}}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow"><span class="dot"></span> Live on GitHub Pages</div>
+    <h1>Idea to URL. <span>Done.</span></h1>
+    <p>This tiny site was created, committed, and published as a capability demo. No framework, no build step—just a clean static page delivered from GitHub.</p>
+    <section class="proof" aria-label="Deployment facts">
+      <div><strong>Static</strong><small>One portable HTML file</small></div>
+      <div><strong>Automated</strong><small>GitHub Actions deploy</small></div>
+      <div><strong>Public</strong><small>Served over HTTPS</small></div>
+    </section>
+    <footer>Built for Loki · <span id="year"></span></footer>
+  </main>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
